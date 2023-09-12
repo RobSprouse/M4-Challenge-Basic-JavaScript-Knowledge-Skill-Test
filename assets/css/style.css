@@ -1,0 +1,114 @@
+/* COMMENT:Root and Initial Elements */
+:root {
+    --Header-footer-font: "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif";
+    --Body-font: "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif";
+}
+
+@media screen {
+    body {
+        margin: 5% 20%;
+        background-color:#012345
+    }
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 1.02em;
+    color: #fff;
+}
+
+/* COMMENT:Body */
+body {
+    font-family: var(--Body-font);
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    background-size: 120em;
+    
+}
+
+/* COMMENT: Header */
+.header {
+    flex-basis: 100%;
+    font-family: var(--Header-footer-font);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2%;
+    min-height: 5vh;
+    border: 1px solid white;
+}
+
+.header h1 {
+    flex-basis: 100%;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* COMMENT:Header Nav */
+.header nav {
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    padding: 2% 0% 2% 0%;
+}
+
+.header nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.header nav ul a {
+    color: inherit;
+    margin: 2em;
+}
+
+/* COMMENT: Main */
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 5%;
+    margin: 0% 2% 0% 2%;
+    color: #fff;
+    max-width: 100%;
+    border: 1px solid white;
+}
+
+.questions {
+    display: flex;
+}
+
+/* COMMENT: Footer */
+.footer {
+    font-family: var(--Header-footer-font);
+    display: flex;
+    background-color: #13293d;
+    color: #fff;
+    padding: 1%;
+    flex-wrap: wrap;
+    margin: 2%;
+    background: rgba(0, 0, 0, 0.8);
+    min-height: 5vh;
+    border: 1px solid white;
+}
+
+.footer h3 {
+    display: flex;
+    flex-basis: 100%;
+    padding: 2% 0% 0% 2%;
+    font-style: italic;
+}
+
+.footer p {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2% 5%;
+    justify-content: center;
+}
