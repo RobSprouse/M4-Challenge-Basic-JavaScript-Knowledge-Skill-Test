@@ -61,6 +61,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .header nav ul a {
     color: inherit;
     margin: 2em;
@@ -91,7 +92,7 @@ body {
 
 .timerdiv span {
     color: green;
-    margin-left: 0.3em
+    margin-left: 0.3em;
 }
 
 .instructionsdiv {
@@ -115,6 +116,7 @@ body {
 .questionsdiv {
     display: none;
 }
+
 .multiplechoiceanswersdiv {
     display: flex;
     justify-content: flex-start;
