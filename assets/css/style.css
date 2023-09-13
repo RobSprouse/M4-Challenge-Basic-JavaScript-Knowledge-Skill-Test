@@ -26,7 +26,6 @@ body {
     flex-direction: column;
     min-height: 50vh;
     background-size: 120em;
-    
 }
 
 /* COMMENT: Header */
@@ -40,10 +39,10 @@ body {
     margin: 2%;
     min-height: 5vh;
     border: 1px solid white;
+    justify-content: center;
 }
 
 .header h1 {
-    flex-basis: 100%;
     align-self: center;
     justify-content: center;
     text-align: center;
@@ -52,8 +51,6 @@ body {
 
 /* COMMENT:Header Nav */
 .header nav {
-    flex-basis: 100%;
-    flex-wrap: wrap;
     padding: 2% 0% 2% 0%;
 }
 
@@ -81,9 +78,42 @@ body {
     border: 1px solid white;
 }
 
-.questions {
+.timerdiv {
     display: flex;
+    justify-content: center;
+    display: none;
 }
+
+
+
+.instructionsdiv {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em 0 2em 0;
+}
+
+.instructionsdiv h2 {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+.instructionsdiv p {
+    display: flex;
+    justify-content: center;
+    margin: 0.3em 3em;
+}
+
+.questionsdiv {
+    display: none;
+}
+.multiplechoiceanswersdiv {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2em;
+    display: none;
+}
+
 
 /* COMMENT: Footer */
 .footer {
