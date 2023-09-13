@@ -1,4 +1,4 @@
-let questionList = [
+const questionList = [
   {
     question: "This is the first question.",
     multipleChoice: [
@@ -7,7 +7,7 @@ let questionList = [
       "wrong answer",
       "wrong answer",
     ],
-    answer: 0,
+    answer: [0],
   },
   {
     question: "This is the second question.",
@@ -17,7 +17,7 @@ let questionList = [
       "wrong answer",
       "wrong answer",
     ],
-    answer: 0,
+    answer: [0],
   },
   {
     question: "This is the third question.",
@@ -27,7 +27,7 @@ let questionList = [
       "wrong answer",
       "wrong answer",
     ],
-    answer: 0,
+    answer: [0],
   },
   {
     question: "This is the fourth question.",
@@ -37,7 +37,7 @@ let questionList = [
       "wrong answer",
       "wrong answer",
     ],
-    answer: 0,
+    answer: [0],
   },
   {
     question: "This is the fifth question.",
@@ -47,7 +47,7 @@ let questionList = [
       "wrong answer",
       "wrong answer",
     ],
-    answer: 0,
+    answer: [0],
   },
   {
     question: "This is the sixth question.",
@@ -57,7 +57,7 @@ let questionList = [
       "wrong answer",
       "wrong answer",
     ],
-    answer: 0,
+    answer: [0],
   },
   {
     question: "This is the seventh question.",
@@ -67,7 +67,7 @@ let questionList = [
       "wrong answer",
       "wrong answer",
     ],
-    answer: 0,
+    answer: [0],
   },
   {
     question: "This is the eighth question.",
@@ -77,7 +77,7 @@ let questionList = [
       "wrong answer",
       "wrong answer",
     ],
-    answer: 0,
+    answer: [0],
   },
   {
     question: "This is the ninth question.",
@@ -87,7 +87,7 @@ let questionList = [
       "wrong answer",
       "wrong answer",
     ],
-    answer: 0,
+    answer: [0],
   },
   {
     question: "This is the tenth question.",
@@ -97,6 +97,8 @@ let questionList = [
       "wrong answer",
       "wrong answer",
     ],
-    answer: 0,
+    answer: [0],
   },
 ];
+
+export default questionList;

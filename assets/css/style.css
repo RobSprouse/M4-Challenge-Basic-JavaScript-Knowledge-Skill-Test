@@ -80,44 +80,67 @@ body {
     border: 1px solid white;
 }
 
-.timerdiv {
+/* COMMENT: Timer */
+.timerDiv {
     display: flex;
     justify-content: center;
     display: none;
 }
 
-.timerdiv p {
+.timerDiv p {
     font-style: italic, bold;
 }
 
-.timerdiv span {
+.timerDiv span {
     color: green;
     margin-left: 0.3em;
 }
 
-.instructionsdiv {
+/* COMMENT: Instructions */
+.instructionsDiv {
     display: flex;
     flex-direction: column;
     margin: 0.5em 0 2em 0;
 }
 
-.instructionsdiv h2 {
+.instructionsDiv h2 {
     display: flex;
     justify-content: center;
     text-decoration: underline;
 }
 
-.instructionsdiv p {
+.instructionsDiv p {
     display: flex;
     justify-content: center;
     margin: 0.3em 3em;
 }
 
-.questionsdiv {
+/* COMMENT: Start Test Button */
+.buttonDiv {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    margin: 0 0 1em 0;
+}
+
+#startTest {
+    display: flex;
+    max-width: 40%;
+    color: white;
+    border: 1px solid white;
+    padding: 5%;
+    border-radius: 1em;
+    justify-content: center;
+    background-color:  #012345;
+}
+
+/* COMMENT: Questions */
+.questionsDiv {
     display: none;
 }
 
-.multiplechoiceanswersdiv {
+/* COMMENT: Answers */
+.multipleChoiceAnswersDiv {
     display: flex;
     justify-content: flex-start;
     margin-left: 2em;
