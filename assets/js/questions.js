@@ -101,4 +101,4 @@ const questionList = [
   },
 ];
 
-export default questionList;
+// export default questionList;
