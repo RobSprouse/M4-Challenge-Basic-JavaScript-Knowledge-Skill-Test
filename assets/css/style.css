@@ -7,7 +7,7 @@
 @media screen {
     body {
         margin: 5% 20%;
-        background-color:#012345
+        background-color: #012345;
     }
 }
 
@@ -85,7 +85,14 @@ body {
     display: none;
 }
 
+.timerdiv p {
+    font-style: italic, bold;
+}
 
+.timerdiv span {
+    color: green;
+    margin-left: 0.3em
+}
 
 .instructionsdiv {
     display: flex;
@@ -114,7 +121,6 @@ body {
     margin-left: 2em;
     display: none;
 }
-
 
 /* COMMENT: Footer */
 .footer {
