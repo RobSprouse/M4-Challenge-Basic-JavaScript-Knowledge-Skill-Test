@@ -43,6 +43,7 @@ body {
 }
 
 .header h1 {
+    flex-basis: 100%;
     align-self: center;
     justify-content: center;
     text-align: center;
