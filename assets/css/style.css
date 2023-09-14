@@ -84,7 +84,6 @@ body {
 .timerDiv {
     display: flex;
     justify-content: center;
-    display: none;
 }
 
 .timerDiv p {
@@ -136,7 +135,7 @@ body {
 
 /* COMMENT: Questions */
 .questionsDiv {
-    display: none;
+    display: flex;
 }
 
 /* COMMENT: Answers */
@@ -144,7 +143,6 @@ body {
     display: flex;
     justify-content: flex-start;
     margin-left: 2em;
-    display: none;
 }
 
 /* COMMENT: Footer */

@@ -100,5 +100,3 @@ const questionList = [
     answer: [0],
   },
 ];
-
-// export default questionList;
