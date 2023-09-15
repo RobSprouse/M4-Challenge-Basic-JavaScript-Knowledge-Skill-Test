@@ -24,60 +24,67 @@
         <nav class="navbar">
             <ul>
                 <li>
-                    <a id="reset">
+                    <a href=".index.html" id="reset">
                         Start Over
                     </a>
                 </li>
                 <li>
-                    <a id="highscrores">
+                    <a href="./assets/html/highscores.html">
                         High-scores
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
+    <!-- COMMENT:Main -->
     <main class="main">
-        <div class="timerdiv">
+        <div class="timerDiv">
             <p>
-                Timer goes here:<span class="timer">----</span>
+                <span id="timer"></span>
             </p>
         </div>
-        <div class="instructionsdiv">
+        <!-- COMMENT: Instructions -->
+        <div class="instructionsDiv">
             <p>
             <h2>Instructions</h2>
             </p>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil natus recusandae amet nostrum odit, ut unde non sint, quia sed inventore odio, delectus iure! Eligendi vitae fuga blanditiis accusamus tempore!.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil natus recusandae amet nostrum odit, ut
+                unde non sint, quia sed inventore odio, delectus iure! Eligendi vitae fuga blanditiis accusamus
+                tempore!.
             </p>
         </div>
-        <div class="questionsdiv">
-            <p>
-                <!-- COMMENT: Questions go here. --> Questions Questions Questions Questions Questions Questions Questions.
+        <!-- COMMENT: Start Button -->
+        <div class="buttonDiv">
+            <button type="button" id="startTest">
+                Start Test
+            </button>
+        </div>
+        <div class="questionsDiv">
+            <p id="questions">
+                <!-- COMMENT: Questions go here. -->
             </p>
         </div>
-        <div class="multiplechoiceanswersdiv">
-            <ol>
-                <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil natus recusandae amet nostrum odit, ut unde non sint, quia sed inventore odio, delectus iure! Eligendi vitae fuga blanditiis accusamus tempore!
-                <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil natus recusandae amet nostrum odit, ut unde non sint, quia sed inventore odio, delectus iure! Eligendi vitae fuga blanditiis accusamus tempore!
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil natus recusandae amet nostrum odit, ut unde non sint, quia sed inventore odio, delectus iure! Eligendi vitae fuga blanditiis accusamus tempore!
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil natus recusandae amet nostrum odit, ut unde non sint, quia sed inventore odio, delectus iure! Eligendi vitae fuga blanditiis accusamus tempore!
-                </li>
+        <div class="multipleChoiceAnswersDiv">
+            <ol id="multipleChoice">
+                <!-- COMMENT:Answers go here. -->
             </ol>
         </div>
-        <!-- TODO: plan main layout. -->
+        <div>
+            <p><span id="score"</p>
+        </div>
+
     </main>
     <!-- COMMENT: Footer -->
     <footer class="footer">
     </footer>
-    <script src="./assets/js/questions.js"
+    <!-- COMMENT: See jQuery js file for citation -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./assets/js/questions.js"></script>
     <script src="./assets/js/script.js"></script>
-    
+
+
 </body>
 
 </html>

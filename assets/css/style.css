@@ -7,7 +7,7 @@
 @media screen {
     body {
         margin: 5% 20%;
-        background-color:#012345
+        background-color: #012345;
     }
 }
 
@@ -43,6 +43,7 @@ body {
 }
 
 .header h1 {
+    flex-basis: 100%;
     align-self: center;
     justify-content: center;
     text-align: center;
@@ -60,6 +61,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .header nav ul a {
     color: inherit;
     margin: 2em;
@@ -78,42 +80,70 @@ body {
     border: 1px solid white;
 }
 
-.timerdiv {
+/* COMMENT: Timer */
+.timerDiv {
     display: flex;
     justify-content: center;
-    display: none;
 }
 
+.timerDiv p {
+    font-style: italic, bold;
+}
 
+.timerDiv span {
+    color: green;
+    margin-left: 0.3em;
+}
 
-.instructionsdiv {
+/* COMMENT: Instructions */
+.instructionsDiv {
     display: flex;
     flex-direction: column;
     margin: 0.5em 0 2em 0;
 }
 
-.instructionsdiv h2 {
+.instructionsDiv h2 {
     display: flex;
     justify-content: center;
     text-decoration: underline;
 }
 
-.instructionsdiv p {
+.instructionsDiv p {
     display: flex;
     justify-content: center;
     margin: 0.3em 3em;
 }
 
-.questionsdiv {
-    display: none;
+/* COMMENT: Start Test Button */
+.buttonDiv {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    margin: 0 0 1em 0;
 }
-.multiplechoiceanswersdiv {
+
+#startTest {
+    display: flex;
+    max-width: 40%;
+    color: white;
+    border: 1px solid white;
+    padding: 5%;
+    border-radius: 1em;
+    justify-content: center;
+    background-color: #012345;
+}
+
+/* COMMENT: Questions */
+.questionsDiv {
+    display: flex;
+}
+
+/* COMMENT: Answers */
+.multipleChoiceAnswersDiv {
     display: flex;
     justify-content: flex-start;
     margin-left: 2em;
-    display: none;
 }
-
 
 /* COMMENT: Footer */
 .footer {
