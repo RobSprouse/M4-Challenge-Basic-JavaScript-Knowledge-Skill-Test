@@ -5,45 +5,42 @@ $(".questionsDiv").hide();
 $(".multipleChoiceAnswersDiv").hide();
 
 $("#startTest").click(function () {
-$(".instructionsDiv").hide();
-$(".buttonDiv").hide();
-$(".timerDiv").show();
-$(".questionsDiv").show();
-$(".multipleChoiceAnswersDiv").show();
+  $(".instructionsDiv").hide();
+  $(".buttonDiv").hide();
+  $(".timerDiv").show();
+  $(".questionsDiv").show();
+  $(".multipleChoiceAnswersDiv").show();
 
-displayQuestion();
+  displayQuestion();
 });
 
-let timeLeft = 100;
-
+let timeLeft = 60;
+let splicedQuestions = [];
+let questionIndex = "";
 
 let timer = setInterval(function () {
   if (timeLeft <= 0) {
-    clearInterval(timer);
     alert("Time's up!");
+    clearInterval;
+    return;
   } else {
     $("#timer").text(timeLeft + " seconds remaining");
   }
   timeLeft -= 1;
 }, 1000);
 
-
-
-let questionAsked = [];
-
 function displayQuestion() {
-  timer;
-
-  if (questionAsked.length >= 10) {
-    return;
-  }
-
   let questionIndex = Math.floor(Math.random() * questionList.length);
-  questionAsked = questionList[questionIndex];
+
+  let questionAsked = questionList[questionIndex];
+  console.log(questionAsked);
+
+  splicedQuestions.push(questionAsked);
 
   $("#questions").text(questionAsked.question);
+  console.log("Question: " + questionAsked.question);
 
-  $("#multipleChoice").empty(); 
+  $("#multipleChoice").empty();
 
   let choices = choicesShuffled(questionAsked.multipleChoice);
 
@@ -63,11 +60,12 @@ function checkAnswer(question, selectedChoice) {
     timeLeft -= 10;
   }
 
-  if (questionList.length > 0) {
+  if (splicedQuestions.length <= 9) {
     displayQuestion();
     console.log(questionList.length);
+    console.log("spliced question length: " + splicedQuestions.length);
   } else {
-    alert("Quiz finished! Your score is: "); 
+    alert("Quiz finished! Your score is: ");
   }
 }
 
