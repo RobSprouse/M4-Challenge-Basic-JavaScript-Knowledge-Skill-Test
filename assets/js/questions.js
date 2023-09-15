@@ -93,10 +93,5 @@ const questionList = [
     question: "question 20.",
     multipleChoice: ["20", "wrong answer", "wrong answer", "wrong answer"],
     answer: "20",
-  },
-  {
-    question: "question 21.",
-    multipleChoice: ["21", "wrong answer", "wrong answer", "wrong answer"],
-    answer: "21",
   }
 ];
