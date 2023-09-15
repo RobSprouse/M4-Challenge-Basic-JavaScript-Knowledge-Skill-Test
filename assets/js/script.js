@@ -18,18 +18,20 @@ $("#startTest").click(function () {
   displayQuestion(); 
 });
 
+let timer = setInterval(function () {
+  if(timeLeft <= 0) {
+    clearInterval(timer);
+    alert("Time's up!");
+    // TODO: add code after time is up
+  } else {
+    $("#timer").text(timeLeft + " seconds remaining")
+  }
+  timeLeft -= 1;
+}, 1000)
 
 function displayQuestion() {
-  let timer = setInterval(function () {
-    if(timeLeft <= 0) {
-      clearInterval(timer);
-      alert("Time's up!");
-      // TODO: add code after time is up
-    } else {
-      $("#timer").text(timeLeft + " seconds remaining")
-    }
-    timeLeft -= 1;
-  }, 1000)
+    
+  timer
 
     // TODO: make only ten questions
     let questionIndex = Math.floor(Math.random() * questionList.length);
