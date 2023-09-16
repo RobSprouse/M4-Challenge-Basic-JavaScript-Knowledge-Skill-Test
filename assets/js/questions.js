@@ -5,10 +5,15 @@ const questionList = [
     answer: "1",
   },
   {
+    question: "question 2.",
+    multipleChoice: ["2", "wrong answer", "wrong answer", "wrong answer"],
+    answer: "2",
+  },
+  {
     question: "question 3.",
     multipleChoice: ["3", "wrong answer", "wrong answer", "wrong answer"],
     answer: "3",
-  },,
+  },
   {
     question: "question 4.",
     multipleChoice: ["4", "wrong answer", "wrong answer", "wrong answer"],
@@ -64,34 +69,34 @@ const questionList = [
     multipleChoice: ["14", "wrong answer", "wrong answer", "wrong answer"],
     answer: "14",
   },
-  {
-    question: "question 15.",
-    multipleChoice: ["15", "wrong answer", "wrong answer", "wrong answer"],
-    answer: "15",
-  },
-  {
-    question: "question 16.",
-    multipleChoice: ["16", "wrong answer", "wrong answer", "wrong answer"],
-    answer: "16",
-  },
-  {
-    question: "question 17.",
-    multipleChoice: ["17", "wrong answer", "wrong answer", "wrong answer"],
-    answer: "17",
-  },
-  {
-    question: "question 18.",
-    multipleChoice: ["18", "wrong answer", "wrong answer", "wrong answer"],
-    answer: "18",
-  },
-  {
-    question: "question 19.",
-    multipleChoice: ["19", "wrong answer", "wrong answer", "wrong answer"],
-    answer: "19",
-  },
-  {
-    question: "question 20.",
-    multipleChoice: ["20", "wrong answer", "wrong answer", "wrong answer"],
-    answer: "20",
-  }
+   {
+     question:"question15.",
+     multipleChoice:["15","Wrong Answer","Wrong Answer","Wrong Answer"],
+     Answer:"15"
+   },
+   {
+     question:"question16.",
+     multipleChoice:["16","Wrong Answer","Wrong Answer","Wrong Answer"],
+     Answer:"16"
+   },
+   {
+     question:"question17.",
+     multipleChoice:["17","Wrong Answer","Wrong Answer","Wrong Answer"],
+     Answer:"17"
+   },
+   {
+     question:"question18.",
+     multipleChoice:["18","Wrong Answer","Wrong Answer","Wrong Answer"],
+     Answer:"18"
+   },
+   {
+     question:"question19.",
+     multipleChoice:["19","Wrong Answer","Wrong Answer","Wrong Answer"],
+     Answer:"19"
+   },
+   {
+     question:"question20.",
+     multipleChoice:["20","Wrong Answer","Wrong Answer","Wrong Answer"],
+     Answer:"20"
+   }
 ];
