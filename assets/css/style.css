@@ -145,6 +145,33 @@ body {
     margin-left: 2em;
 }
 
+/* COMMENT: Score */
+.scoreDiv {
+    display: flex;
+    justify-content: center;
+    margin: 0.5em 0 2em 0;
+    }
+
+.scoreDiv h2 {
+    display: flex;
+    justify-content: center;
+    margin: 0.3em 3em;
+}
+
+/* COMMENT: Result */
+.resultDiv {
+    display: flex;
+    justify-content: center;
+    margin: 0.5em;
+    border-top: 1px solid #fff;
+    }
+
+.resultDiv p {
+    display: flex;
+    justify-content: center;
+    margin: 0.5em;
+}
+
 /* COMMENT: Footer */
 .footer {
     font-family: var(--Header-footer-font);

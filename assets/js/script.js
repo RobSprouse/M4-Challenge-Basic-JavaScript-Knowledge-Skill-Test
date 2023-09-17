@@ -1,63 +1,67 @@
-// let jsonString = JSON.stringify(questionList);
-// localStorage.setItem("questionList", jsonString);
-// let retrievedString = localStorage.getItem("questionList");
-// let retrievedObject = JSON.parse(retrievedString);
-
 $(".timerDiv").hide();
 $(".questionsDiv").hide();
 $(".multipleChoiceAnswersDiv").hide();
+$(".scoreDiv").hide();
+$(".resultDiv").hide();
 
 let timeLeft = 60;
 let splicedQuestions = [];
-let compiledQuestion = [];
+let compiledQuestions = [];
+let timer;
+let score
 
-function compileQuestions() {
-  if (compiledQuestion.length === 0) {
-    while (compiledQuestion.length < 10) {
-      let questionIndex = Math.floor(Math.random() * questionList.length);
-      compiledQuestion.push(questionList[questionIndex]);
-      questionList.splice(questionIndex, 1);
+function startTimer() {
+  timer = setInterval(function () {
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      alert("Your time is up. You have a score of 0")
+      location.reload();
+    } else {
+      $("#timer").text(timeLeft + " seconds remaining");
     }
-  }
-  let jsonString = JSON.stringify(compiledQuestion);
-  localStorage.setItem("compiledQuestions", jsonString);
+    timeLeft -= 1;
+  }, 1000);
 }
 
+// COMMENT: Compiles random questions from questionList that will be assigned into an array questions will be drawn from.
+function compileQuestions() {  
+  if (compiledQuestions.length === 0) {
+    while (compiledQuestions.length < 10) {
+      let questionIndex = Math.floor(Math.random() * questionList.length);
+      compiledQuestions.push(questionList[questionIndex]);
+      questionList.splice(questionIndex, 1);
+    }
+    // COMMENT: Stores compiled questions into local storage, helps keep the browser from finding the object "undefined"
+    let jsonStringifyCompiledQuestions = JSON.stringify(compiledQuestions);
+    localStorage.setItem("compiledQuestions", jsonStringifyCompiledQuestions);
+  }
+}
 
-  function displayQuestion() {
-    let retrievedString = localStorage.getItem("compiledQuestions");
-    let retrievedCompiledQuestions = JSON.parse(retrievedString);
-    let questionAsked = retrievedCompiledQuestions.shift();
-    let jsonString = JSON.stringify(retrievedCompiledQuestions);
-    localStorage.setItem("compiledQuestions", jsonString);
+// COMMENT: Handles the assignment of the questions displayed, how the choices are displayed, and how they're checked.
+function displayQuestion() {
+  $("#result").empty
+  // COMMENT: Retrieves and parses compiled questions string
+  jsonStringifyCompiledQuestions = localStorage.getItem("compiledQuestions");
+  let compiledQuestions = JSON.parse(jsonStringifyCompiledQuestions);
 
-    compiledQuestion = retrievedCompiledQuestions;
-  
+  // COMMENT: Utilizes the parsed compiledQuestions and assigns the first set of objects to questionAsked, splice's the used objects out of the compiledQuestions array
+  let questionAsked = compiledQuestions[0]
+  compiledQuestions.splice(0, 1)
 
-  console.log("logging compiledQuestion " + compiledQuestion)
-  console.log("logging questionAsked" + questionAsked)
+  // COMMENT: Stores questionAsked and compiledQuestions, helps keep the browser from finding the object "undefined"
+  let jsonStringifyQuestionAsked = JSON.stringify(questionAsked);
+  localStorage.setItem("questionAsked", jsonStringifyQuestionAsked);
 
-  localStorage.setItem("questionAsked", JSON.stringify(questionAsked));
-  
-  console.log("logging questionAsked" + questionAsked)
-  
-  splicedQuestions.push(questionAsked);
-  
+  jsonStringifyCompiledQuestions = JSON.stringify(compiledQuestions);
+  localStorage.setItem("compiledQuestions", jsonStringifyCompiledQuestions);
 
-  document.getElementById("questions").textContent = questionAsked.question;
+  // COMMENT: Retrieves questionAsked for use
+  jsonStringifyQuestionAsked = localStorage.getItem("questionAsked");
+  questionAsked = JSON.parse(jsonStringifyQuestionAsked);
 
-  console.log("Question: " + questionAsked.question);
+  $("#questions").text(questionAsked.question);
 
   $("#multipleChoice").empty();
-
-  // COMMENT: Function to shuffle an array (Fisher-Yates shuffle)
-  function choicesShuffled(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-  }
 
   let choices = choicesShuffled(questionAsked.multipleChoice);
 
@@ -69,38 +73,49 @@ function compileQuestions() {
     $("#multipleChoice").append(li);
   }
 
+    // COMMENT: Function to shuffle an array (Fisher-Yates shuffle)
+    function choicesShuffled(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+  
+  function checkAnswer(question, selectedChoice) {
+    if (selectedChoice !== question.answer) {
+      $("#result").text("Incorrect! Ten points have been deducted.");
+      timeLeft -= 10;
+    } else {
+      $("#result").text("Correct!");
+    }
+
+    if (compiledQuestions.length != 0) {
+      $("#multipleChoice").empty();
+      displayQuestion();
+    } else {
+      clearInterval(timer);
+      $(".timerDiv").hide();
+      $(".questionsDiv").hide();
+      $("#multipleChoice").empty();
+      $("#timerDiv").hide();    
+      $(".questionsDiv").hide();
+      $(".multipleChoiceAnswersDiv").hide();
+      $(".resultDiv").hide();
+      $(".scoreDiv").show();
+      $("#score").append("<h2>Quiz finished! Your score is: " + timeLeft + "</h2>");
+    }
+  }
 }
-
-function checkAnswer(question, selectedChoice) {
-  if (selectedChoice !== question.answer) {
-    alert("wrong")
-    // timeLeft -= 10;
-  }
-
-  if (selectedChoice === question.answer) {
-    alert("right")
-  }
-
-  let retrievedString = localStorage.getItem("compiledQuestions");
-  let retrievedCompiledQuestions = JSON.parse(retrievedString);
-
-  if (retrievedCompiledQuestions.length != 0) {
-    displayQuestion();
-  } else {
-    alert("Quiz finished! Your score is: ");
-  }
-}
-
-
 
 $("#startTest").click(function () {
-  compileQuestions()
-  console.log("logging compiledQuestion " + compiledQuestion)
+  startTimer();
+  compileQuestions();
   $(".instructionsDiv").hide();
   $(".buttonDiv").hide();
   $(".timerDiv").show();
   $(".questionsDiv").show();
   $(".multipleChoiceAnswersDiv").show();
+  $(".resultDiv").show();
   displayQuestion();
 });
-
