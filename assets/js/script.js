@@ -31,33 +31,15 @@ function compileQuestions() {
       compiledQuestions.push(questionList[questionIndex]);
       questionList.splice(questionIndex, 1);
     }
-    // COMMENT: Stores compiled questions into local storage, helps keep the browser from finding the object "undefined"
-    let jsonStringifyCompiledQuestions = JSON.stringify(compiledQuestions);
-    localStorage.setItem("compiledQuestions", jsonStringifyCompiledQuestions);
   }
 }
 
 // COMMENT: Handles the assignment of the questions displayed, how the choices are displayed, and how they're checked.
 function displayQuestion() {
   $("#result").empty
-  // COMMENT: Retrieves and parses compiled questions string
-  jsonStringifyCompiledQuestions = localStorage.getItem("compiledQuestions");
-  let compiledQuestions = JSON.parse(jsonStringifyCompiledQuestions);
 
-  // COMMENT: Utilizes the parsed compiledQuestions and assigns the first set of objects to questionAsked, splice's the used objects out of the compiledQuestions array
   let questionAsked = compiledQuestions[0]
   compiledQuestions.splice(0, 1)
-
-  // COMMENT: Stores questionAsked and compiledQuestions, helps keep the browser from finding the object "undefined"
-  let jsonStringifyQuestionAsked = JSON.stringify(questionAsked);
-  localStorage.setItem("questionAsked", jsonStringifyQuestionAsked);
-
-  jsonStringifyCompiledQuestions = JSON.stringify(compiledQuestions);
-  localStorage.setItem("compiledQuestions", jsonStringifyCompiledQuestions);
-
-  // COMMENT: Retrieves questionAsked for use
-  jsonStringifyQuestionAsked = localStorage.getItem("questionAsked");
-  questionAsked = JSON.parse(jsonStringifyQuestionAsked);
 
   $("#questions").text(questionAsked.question);
 
@@ -101,9 +83,9 @@ function displayQuestion() {
       $("#timerDiv").hide();    
       $(".questionsDiv").hide();
       $(".multipleChoiceAnswersDiv").hide();
-      $(".resultDiv").hide();
       $(".scoreDiv").show();
-      $("#score").append("<h2>Quiz finished! Your score is: " + timeLeft + "</h2>");
+      $("#score").text(timeLeft);
+      $("#result").text("Click here to enter your initials!");
     }
   }
 }

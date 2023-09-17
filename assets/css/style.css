@@ -148,19 +148,23 @@ body {
 /* COMMENT: Score */
 .scoreDiv {
     display: flex;
+    flex-basis: 100%;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 0.5em 0 2em 0;
     }
 
 .scoreDiv h2 {
     display: flex;
+    flex-basis: 100%;
     justify-content: center;
-    margin: 0.3em 3em;
+    margin: 2.5em;
 }
 
 /* COMMENT: Result */
 .resultDiv {
     display: flex;
+    flex-basis: 100%;
     justify-content: center;
     margin: 0.5em;
     border-top: 1px solid #fff;
@@ -168,8 +172,9 @@ body {
 
 .resultDiv p {
     display: flex;
+    flex-basis: 100%;
     justify-content: center;
-    margin: 0.5em;
+    margin: 0.3em 3em;
 }
 
 /* COMMENT: Footer */
