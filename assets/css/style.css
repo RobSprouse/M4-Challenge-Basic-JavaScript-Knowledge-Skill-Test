@@ -15,7 +15,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-size: 1.02em;
+    font-size: 1.05em;
     color: #fff;
 }
 
@@ -145,6 +145,14 @@ body {
     margin-left: 2em;
 }
 
+#multipleChoice li {
+    margin: 1.5em;
+}
+
+#multipleChoice li:hover {
+    color: blue;
+}
+
 /* COMMENT: Score */
 .scoreDiv {
     display: flex;
@@ -165,6 +173,7 @@ body {
 .resultDiv {
     display: flex;
     flex-basis: 100%;
+    flex-direction: column;
     justify-content: center;
     margin: 0.5em;
     border-top: 1px solid #fff;
@@ -175,6 +184,15 @@ body {
     flex-basis: 100%;
     justify-content: center;
     margin: 0.3em 3em;
+}
+
+#logScore {
+    text-decoration: underline;
+    
+}
+
+#logScore:hover {
+    color: blue;
 }
 
 /* COMMENT: Footer */
@@ -203,4 +221,72 @@ body {
     flex-wrap: wrap;
     padding: 2% 5%;
     justify-content: center;
+}
+
+#highScoresTableDiv {
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+}
+
+#highScoresTableDiv td, #highScoresTableDiv th {
+    padding: 1em;
+    border: 1px solid #fff;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 2500px) {
+    body {
+        margin: 5% 25%;
+    }
+    * {
+        font-size: 1.06em;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    body {
+        margin: 5% 20%;
+    }
+    * {
+        font-size: 1.03em;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        font-size: 1.03em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    * {
+        font-size: 1.03em;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    body {
+        margin: 0% 0%;
+    }
+    * {
+        font-size: 1.03em;
+    }
+}
+@media screen and (max-width: 560px) {
+    * {
+        font-size: 1.03em;
+    }
+}
+@media screen and (max-width: 460px) {
+    * {
+        font-size: 1.03em;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    * {
+        font-size: 1.03em;
+    }
 }
