@@ -24,7 +24,7 @@
         <nav class="navbar">
             <ul>
                 <li>
-                    <a href=".index.html" id="reset">
+                    <a href="javascript:location.reload()">
                         Start Over
                     </a>
                 </li>
@@ -62,7 +62,7 @@
         </div>
         <div class="questionsDiv">
             <p id="questions">
-                <!-- COMMENT: Questions go here. -->
+                <!-- COMMENT: Questions go here. -->Questions
             </p>
         </div>
         <div class="multipleChoiceAnswersDiv">
@@ -70,8 +70,16 @@
                 <!-- COMMENT:Answers go here. -->
             </ol>
         </div>
-        <div>
-            <p><span id="score"</p>
+        <div class="scoreDiv">
+            <!-- COMMENT: Score goes here. -->
+            <h2>
+                Quiz finished! Your score is:
+            </h2>
+            <p id="score"></p>
+        </div>
+        <div class="resultDiv">
+            <!-- COMMENT: Incorrect/Correct goes here -->
+           <p id="result"></p>
         </div>
 
     </main>
@@ -79,8 +87,7 @@
     <footer class="footer">
     </footer>
     <!-- COMMENT: See jQuery js file for citation -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./assets/js/jQuery-JavaScript-Library-v3.7.1.js"></script>
     <script src="./assets/js/questions.js"></script>
     <script src="./assets/js/script.js"></script>
 
