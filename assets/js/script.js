@@ -115,7 +115,10 @@ function checkAnswer(question, selectedChoice) {
     $("#logScore").click(function () {
       let initials = prompt("Please enter your initials:");
       if (initials != null) {
-        localStorage.setItem(initials, timeLeft);
+        let score = timeLeft
+        let storedScores = JSON.parse(localStorage.getItem("storedScores")) || [];
+        storedScores.push({initials: initials, timeLeft: timeLeft});
+        localStorage.setItem("storedScores", JSON.stringify(storedScores));
       }
     });
   }
@@ -124,10 +127,10 @@ function checkAnswer(question, selectedChoice) {
 // COMMENT: Executes a function to display the local storage objects as initials and highscores when viewing the highscores.html
 $(document).ready(function () {
   if (window.location.href.indexOf("highscores.html") > -1) {
-    let keys = Object.keys(localStorage);
-
-    keys.sort(function (a, b) {
-      return localStorage[b] - localStorage[a];
+    let storedScores = JSON.parse(localStorage.getItem("storedScores")) || [];
+    
+    storedScores.sort(function(a, b) {
+      return b.timeLeft - a.timeLeft
     });
 
     let table = $("<table></table>").attr("id", "highScoresTable");
@@ -136,10 +139,10 @@ $(document).ready(function () {
     headerRow.append($("<th></th>").text("Score"));
     table.append(headerRow);
 
-    for (let i = 0; i < keys.length; i++) {
+    for (let i = 0; i < storedScores.length; i++) {
       let row = $("<tr></tr>");
-      row.append($("<td></td>").text(keys[i]));
-      row.append($("<td></td>").text(localStorage[keys[i]]));
+      row.append($("<td></td>").text(storedScores[i].initials));
+      row.append($("<td></td>").text(storedScores[i].timeLeft));
       table.append(row);
     }
     $("#highScoresTableDiv").append(table);
