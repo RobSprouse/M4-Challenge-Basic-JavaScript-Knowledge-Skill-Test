@@ -9,10 +9,8 @@
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Basic Javascript Knowledge Skill Test</title>
-    <!-- TODO: Add content description. -->
-    <meta name="description" content="">
-    <!-- TODO:Add Keywords -->
-    <meta name="keywords" content="">
+    <meta name="description" content="A basic knowledge test on JavaScript.">
+    <meta name="javascript quiz, bootcamp module" content="">
 </head>
 
 <!-- COMMENT: Body -->
@@ -49,9 +47,13 @@
             <h2>Instructions</h2>
             </p>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil natus recusandae amet nostrum odit, ut
-                unde non sint, quia sed inventore odio, delectus iure! Eligendi vitae fuga blanditiis accusamus
-                tempore!.
+                You will be presented with a set of ten randomized questions and answers to be completed within sixty
+                seconds. After you have chosen an answer, you will be informed if you were correct or incorrect. If you
+                choose an incorrect answer, ten seconds will be deducted from the time remaining. If you fail to
+                complete the test in time, the test will end and you will be brought back to the instructions page.
+                After answering ten questions your score, which is designed to be the remaining time, will be displayed.
+                You have the option of clicking a link to save your initials and score into the browser's local storage
+                that will be displayed on the High-scores section of the website.
             </p>
         </div>
         <!-- COMMENT: Start Button -->
@@ -79,13 +81,17 @@
         </div>
         <div class="resultDiv">
             <!-- COMMENT: Incorrect/Correct goes here -->
-           <p id="result"></p>
-           <p id="logScore"></p>
+            <p id="result"></p>
+            <p id="logScore"></p>
         </div>
 
     </main>
     <!-- COMMENT: Footer -->
     <footer class="footer">
+        <p>
+            Reference:
+        </p>
+        <p id="citeQuestion"></p>
     </footer>
     <!-- COMMENT: See jQuery js file for citation -->
     <script src="./assets/js/jQuery-JavaScript-Library-v3.7.1.js"></script>

@@ -3,6 +3,7 @@ $(".questionsDiv").hide();
 $(".multipleChoiceAnswersDiv").hide();
 $(".scoreDiv").hide();
 $(".resultDiv").hide();
+$(".footer").hide();
 
 let timeLeft = 60;
 let compiledQuestions = [];
@@ -36,6 +37,7 @@ function compileQuestions() {
 // COMMENT: Handles the assignment of the questions displayed, how the choices are displayed, and how they're checked.
 function displayQuestion() {
   let questionAsked = compiledQuestions[0];
+  $("#citeQuestion").html('<a href="' + compiledQuestions[0].website + '">' + compiledQuestions[0].reference + '</a>');
   compiledQuestions.splice(0, 1);
 
   $("#questions").text(questionAsked.question);
@@ -137,5 +139,6 @@ $("#startTest").click(function () {
   $(".questionsDiv").show();
   $(".multipleChoiceAnswersDiv").show();
   $(".resultDiv").show();
+  $(".footer").show();
   displayQuestion();
 });
