@@ -1,44 +1,36 @@
 # M4-Challenge-Basic-JavaScript-Knowledge-Skill-Test
 
-# 04 Web APIs: Code Quiz
+## Description
 
-## Your Task
+This Repository was created to complete the University of Richmond's Coding Bootcamp, Module 3 Challenge. The challenge required me to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected.
 
-At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
+The following User Story and Acceptance Criteria was used to achieve the primary objective.
 
-To help familiarize you with these tests and allow you to use the skills covered in this module, this Challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
+>## User Story
+>
+>```
+>AS A coding boot camp student
+>I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
+>SO THAT I can gauge my progress compared to my peers
+>```
+>
+>## Acceptance Criteria
+>
+>```
+>GIVEN I am taking a code quiz
+>WHEN I click the start button
+>THEN a timer starts and I am presented with a question
+>WHEN I answer a question
+>THEN I am presented with another question
+>WHEN I answer a question incorrectly
+>THEN time is subtracted from the clock
+>WHEN all questions are answered or the timer reaches 0
+>THEN the game is over
+>WHEN the game is over
+>THEN I can save my initials and my score
+>```
 
-This week’s coursework will equip you with all the skills you need to succeed in this assignment.
-
-## User Story
-
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
-
-## Acceptance Criteria
-
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score
-```
-
-## Mock-Up
-
-The following animation demonstrates the application functionality:
-
-![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./Assets/04-web-apis-homework-demo.gif)
+## Usage
 
 ## Grading Requirements
 
