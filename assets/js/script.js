@@ -18,10 +18,14 @@ function startTimer() {
       location.reload();
     } else {
       $("#timer").text(timeLeft + " seconds remaining");
+      if (timeLeft <= 15) {
+        $("#timer").css("color", "red");
+      }
     }
     timeLeft -= 1;
   }, 1000);
 }
+
 
 // COMMENT: Compiles random questions from questionList that will be assigned into an array questions will be drawn from.
 function compileQuestions() {
@@ -37,7 +41,12 @@ function compileQuestions() {
 // COMMENT: Handles the assignment of the questions displayed, how the choices are displayed, and how they're checked.
 function displayQuestion() {
   let questionAsked = compiledQuestions[0];
-  $("#citeQuestion").html('<a href="' + compiledQuestions[0].website + '">' + compiledQuestions[0].reference + '</a>');
+  $("#citeQuestion").html(
+    '<a href="' +
+      compiledQuestions[0].website +'" target="_blank">'
+      + compiledQuestions[0].reference + '</a>'
+
+  );
   compiledQuestions.splice(0, 1);
 
   $("#questions").text(questionAsked.question);
