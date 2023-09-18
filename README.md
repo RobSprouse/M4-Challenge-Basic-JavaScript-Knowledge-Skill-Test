@@ -32,62 +32,46 @@ The following User Story and Acceptance Criteria was used to achieve the primary
 
 ## Usage
 
-## Grading Requirements
+This application was deployed to the following URL.
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+>https://robsprouse.github.io/M4-Challenge-Basic-JavaScript-Knowledge-Skill-Test/
 
-This Challenge is graded based on the following criteria: 
 
-### Technical Acceptance Criteria: 40%
+The following images shows the web application's appearance. 
+<br></br>
 
-* Satisfies all of the preceding acceptance criteria.
+><img src="./assets/images/M4-Challenge-Basic-JavaScript-Knowledge-Skill-Test_index.png">
 
-### Deployment: 32%
+><img src="assets/images/M4-Challenge-Basic-JavaScript-Knowledge-Skill-Test_questions.png">
 
-* Application deployed at live URL.
+><img src="assets/images/M4-Challenge-Basic-JavaScript-Knowledge-Skill-Test_highscores.png">
 
-* Application loads with no errors.
+## Credits
 
-* Application GitHub URL submitted.
+Questions were derived from the following website which provides resources for web development. Under each question used, when it's displayed, will be a link that will take you to the page where the information used to compose the question. 
 
-* GitHub repository contains application code.
+>https://developer.mozilla.org/en-US/
 
-### Application Quality: 15%
+## License
 
-* Application user experience is intuitive and easy to navigate.
+MIT License
 
-* Application user interface style is clean and polished.
+Copyright (c) 2023 Robert Sprouse
 
-* Application resembles the mock-up functionality provided in the Challenge instructions.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-### Repository Quality: 13%
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
----
-
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
