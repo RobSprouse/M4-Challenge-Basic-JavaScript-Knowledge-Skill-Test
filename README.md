@@ -2,7 +2,7 @@
 
 ## Description
 
-This Repository was created to complete the University of Richmond's Coding Bootcamp, Module 3 Challenge. The challenge required me to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected.
+This Repository was created to complete the University of Richmond's Coding Bootcamp, Module 4 Challenge. The challenge required me to design and deploy an timed quiz on JavaScript fundamentals.
 
 The following User Story and Acceptance Criteria was used to achieve the primary objective.
 
