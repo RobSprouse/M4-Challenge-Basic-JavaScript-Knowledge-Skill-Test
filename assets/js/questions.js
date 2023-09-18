@@ -1,3 +1,5 @@
+// COMMENT: contains the list of questions that will be used for the quiz
+
 const questionList = [
   {
     question: "The primary purpose of Javascript is to",

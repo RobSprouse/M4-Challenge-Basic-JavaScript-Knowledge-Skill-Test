@@ -1,3 +1,6 @@
+// COMMENT: Script file for the Javascript multiple choice test
+
+// COMMENT: Hides the sections not needed initially
 $(".timerDiv").hide();
 $(".questionsDiv").hide();
 $(".multipleChoiceAnswersDiv").hide();
@@ -5,11 +8,13 @@ $(".scoreDiv").hide();
 $(".resultDiv").hide();
 $(".footer").hide();
 
+// COMMENT: Declares variables
 let timeLeft = 180;
 let compiledQuestions = [];
 let timer;
 let score;
 
+// COMMENT: Timer Function
 function startTimer() {
   timer = setInterval(function () {
     if (timeLeft <= 0) {
@@ -26,8 +31,7 @@ function startTimer() {
   }, 1000);
 }
 
-
-// COMMENT: Compiles random questions from questionList that will be assigned into an array questions will be drawn from.
+// COMMENT: Compiles random questions from questionList (questions.js) that will be assigned into an array questions will be drawn from.
 function compileQuestions() {
   if (compiledQuestions.length === 0) {
     while (compiledQuestions.length < 10) {
@@ -73,6 +77,7 @@ function choicesShuffled(array) {
   return array;
 }
 
+// COMMENT: Function to check answers and display whether or not they are correct. Also ends the displayQuestion() function, hides divs, and displays a score after ten questions
 function checkAnswer(question, selectedChoice) {
   if (selectedChoice !== question.answer) {
     $("#result").text(
@@ -116,6 +121,7 @@ function checkAnswer(question, selectedChoice) {
   }
 }
 
+// COMMENT: Executes a function to display the local storage objects as initials and highscores when viewing the highscores.html
 $(document).ready(function () {
   if (window.location.href.indexOf("highscores.html") > -1) {
     let keys = Object.keys(localStorage);
@@ -139,6 +145,8 @@ $(document).ready(function () {
     $("#highScoresTableDiv").append(table);
   }
 });
+
+// COMMENT: Event listener for the start button which hides/shows divs and starts the test (displayQuestion())
 
 $("#startTest").click(function () {
   startTimer();
