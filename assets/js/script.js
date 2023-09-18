@@ -5,7 +5,7 @@ $(".scoreDiv").hide();
 $(".resultDiv").hide();
 $(".footer").hide();
 
-let timeLeft = 60;
+let timeLeft = 180;
 let compiledQuestions = [];
 let timer;
 let score;
@@ -18,7 +18,7 @@ function startTimer() {
       location.reload();
     } else {
       $("#timer").text(timeLeft + " seconds remaining");
-      if (timeLeft <= 15) {
+      if (timeLeft <= 20) {
         $("#timer").css("color", "red");
       }
     }
@@ -78,7 +78,7 @@ function checkAnswer(question, selectedChoice) {
     $("#result").text(
       "Previous question incorrect! Ten points have been deducted."
     );
-    timeLeft -= 10;
+    timeLeft -= 18;
   } else {
     $("#result").text("Previous question Correct!");
   }
@@ -97,6 +97,7 @@ function checkAnswer(question, selectedChoice) {
     $(".scoreDiv").show();
     $("#score").text(timeLeft);
     $("#result").remove();
+    $(".footer").hide();
     $("#logScore").text(
       "Click here to enter your initials to keep track of your scores!"
     );
